@@ -5,6 +5,8 @@ const util = require('util');
 
 // TODO: Create an array of questions for user input
 const questions = [
+    inquirer
+    .prompt([
     {
     type:'input',
     name: 'repo',
@@ -57,6 +59,7 @@ const questions = [
         name: 'email',
         message: "Please enter your email."
     },
+])
 ];
 
 // TODO: Create a function to write README file
