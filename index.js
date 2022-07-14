@@ -5,8 +5,6 @@ const util = require('util');
 
 // TODO: Create an array of questions for user input
 const questions = [
-    inquirer
-    .prompt([
     {
     type:'input',
     name: 'repo',
@@ -16,7 +14,6 @@ const questions = [
     type:'input',
     name: 'description',
     message: "How would you describe your application?",
-    default: 'Challenge Description',
     validate: function(answers) {
         if (answers.length == 0) {
             return console.log("please enter a valid description")
@@ -59,16 +56,30 @@ const questions = [
         name: 'email',
         message: "Please enter your email."
     },
-])
+
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    
+    fs.writeFile(fileName, data, err => {
+    if (err) {
+        console.log(err);
+    }
+    console.log('README.md is created')
+});
 }
 
+
+
+
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+        .prompt(questions)
+        .then(function(data) {
+            writeToFile(fileName, data)
+        })
+}
 
 // Function call to initialize app
 init();
