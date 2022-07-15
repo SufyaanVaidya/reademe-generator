@@ -2,12 +2,13 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const util = require('util');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
     type:'input',
-    name: 'repo',
+    name: 'title',
     message: "What's the name of your repo?"
     },
     {
@@ -59,9 +60,11 @@ const questions = [
 
 ];
 
+const fileName = "README.md";
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, err => {
+    const readmeMarkdown = generateMarkdown(data);
+    fs.writeFile(fileName, readmeMarkdown, err => {
     if (err) {
         console.log(err);
     }
