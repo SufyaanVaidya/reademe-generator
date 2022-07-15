@@ -43,9 +43,10 @@ const questions = [
         message: "How can the app be tested?"
     },
     {
-        type:'input',
+        type:'list',
         name: 'license',
-        message: "Which license would you like to use?"
+        message: "Which license would you like to use?",
+        choices: ['MIT', 'GNU', 'Apache 2.0', 'Mozilla Public']
     },
     {
         type:'input',
