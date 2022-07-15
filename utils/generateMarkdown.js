@@ -15,31 +15,31 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
 # Description
-  ${data.description}
+ - ${data.description}
 
 
 
 # Installation
-  ${data.installation}
+ - ${data.installation}
 
 
 
 
 # Usage
-  ${data.usage}
+ - ${data.usage}
 
 
 
 
 # contributions
-  ${data.contributions}
+ - ${data.contributions}
 
 
 
 
 
 # Tests
-  ${data.testing}
+ - ${data.testing}
 
 
 
