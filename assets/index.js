@@ -12,6 +12,11 @@ const questions = [
     },
     {
     type:'input',
+    name: 'deployedlink',
+    message: "What is the apps deployed link?"
+    },
+    {
+    type:'input',
     name: 'description',
     message: "How would you describe your application?",
     validate: function(answers) {
@@ -30,6 +35,21 @@ const questions = [
         type:'input',
         name: 'usage',
         message: "Explain with examples on how to use the application."
+    },
+    {
+        type:'input',
+        name: 'gif',
+        message: "Please enter the file path for usage gif."
+    },
+    {
+        type:'input',
+        name: 'codeone',
+        message: "Please enter the file path for the first usage code image."
+    },
+    {
+        type:'input',
+        name: 'codetwo',
+        message: "Please enter the file path for second usage code image."
     },
     {
         type:'input',
