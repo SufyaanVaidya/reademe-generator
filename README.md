@@ -33,11 +33,11 @@
 # Usage
  - Please refer to the below gif -
 
-  ![](./images/usage.gif)
+  ![](./assets/images/usage.gif)
 
-  ![](./images/codeone.PNG)
+  ![](./assets/images/codeone.PNG)
 
-  ![](./images/codetwo.PNG)
+  ![](./assets/images/codetwo.PNG)
 
 
 
